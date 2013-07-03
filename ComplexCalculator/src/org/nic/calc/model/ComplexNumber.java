@@ -6,6 +6,13 @@ public class ComplexNumber
 {
 	private SimpleDoubleProperty real;
 	private SimpleDoubleProperty imag;
+	
+	public ComplexNumber() {}
+	
+	public ComplexNumber(double real, double imag) {
+		this.real.set(real);
+		this.imag.set(imag);
+	}
 		
 	public SimpleDoubleProperty getRealProperty() { return real; }
 	public SimpleDoubleProperty getImagProperty() { return imag; }

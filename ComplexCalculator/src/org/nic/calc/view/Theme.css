@@ -2,6 +2,24 @@
     -fx-background-color: #1d1d1d;
 }
 
+.split-pane {
+	-fx-background-color:transparent ;
+	-fx-border-color: white;
+    -fx-border-width: 2;
+}
+
+.split-pane:horizontal {
+	
+}
+
+.split-pane:vertical {
+	
+}
+
+.split-pane-divider {
+	-fx-background-color:white ;
+}
+
 .label {
     -fx-font-size: 16pt;
     -fx-font-family: "Segoe UI Semibold";
@@ -150,4 +168,73 @@
     -fx-text-fill: white;
     -fx-opacity: 1;
     -fx-text-fill: white;
+}
+
+.radio-button {
+	-fx-alignment:top-left ;
+	-fx-text-alignment:left ;
+	-fx-wrap-text:false ;
+	/*-fx-font: ;*/
+	-fx-graphic:null;
+	-fx-content-display:left ;
+	-fx-graphic-text-gap:10;
+	-fx-label-padding:10px,0,0,0;
+	-fx-text-fill:white;
+	/*-fx-ellipsis-string: ;*/
+	-fx-skin: null;
+}
+
+.radio-button-selected {
+	
+}
+
+.toggle-button {
+	-fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+	-fx-alignment:center;
+	-fx-text-alignment:center  ;
+	-fx-wrap-text:false ;
+	/*-fx-font: ;*/
+	-fx-graphic:null;
+	-fx-content-display:center  ;
+	-fx-graphic-text-gap:4;
+	-fx-label-padding:0,0,0,0;
+	-fx-text-fill:white;
+	/*-fx-ellipsis-string: ;*/
+}
+
+.toggle-button:selected {
+	-fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+	-fx-alignment:center;
+	-fx-text-alignment:center  ;
+	-fx-wrap-text:false ;
+	/*-fx-font: ;*/
+	-fx-graphic:null;
+	-fx-content-display:left ;
+	-fx-graphic-text-gap:4;
+	-fx-label-padding:0,0,0,0;
+	-fx-text-fill:white;
+	/*-fx-ellipsis-string: ;*/
+	-fx-effect:innershadow( three-pass-box, #ffb800, 20, 0, 0, 0 ) ;
+}
+
+.toggle-button:hover {
+	 -fx-background-color: rgb(230,230,230);
+	 -fx-text-fill:black;
+}
+
+.separator {
+	-fx-border-color: white;
+    -fx-border-width: 1;
 }

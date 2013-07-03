@@ -11,33 +11,52 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="org.nic.calc.controller.CalculatorController">
   <!-- TODO Add Nodes -->
   <children>
-    <HBox id="HBox" alignment="CENTER" layoutX="130.0" layoutY="186.0" spacing="20.0">
+    <HBox id="toggleBox" alignment="CENTER" layoutX="130.0" layoutY="188.0" prefWidth="340.0" spacing="20.0">
       <children>
-        <Button mnemonicParsing="false" prefWidth="70.0" text="+" />
-        <Button mnemonicParsing="false" prefWidth="70.0" text="-" />
-        <Button mnemonicParsing="false" prefWidth="70.0" text="*" />
-        <Button mnemonicParsing="false" prefWidth="70.0" text="/" />
+        <ToggleButton fx:id="toggleAdd" mnemonicParsing="false" prefWidth="60.0" selected="true" text="+" HBox.hgrow="ALWAYS">
+          <stylesheets>
+            <URL value="@Theme.css" />
+          </stylesheets>
+          <toggleGroup>
+            <ToggleGroup fx:id="operatorGroup" />
+          </toggleGroup>
+        </ToggleButton>
+        <ToggleButton fx:id="toggleSub" mnemonicParsing="false" prefWidth="60.0" text="-" toggleGroup="$operatorGroup" HBox.hgrow="ALWAYS">
+          <stylesheets>
+            <URL value="@Theme.css" />
+          </stylesheets>
+        </ToggleButton>
+        <ToggleButton fx:id="toggleMul" mnemonicParsing="false" prefWidth="60.0" text="*" toggleGroup="$operatorGroup" HBox.hgrow="ALWAYS">
+          <stylesheets>
+            <URL value="@Theme.css" />
+          </stylesheets>
+        </ToggleButton>
+        <ToggleButton fx:id="toggleDiv" mnemonicParsing="false" prefWidth="60.0" text="/" toggleGroup="$operatorGroup" HBox.hgrow="ALWAYS">
+          <stylesheets>
+            <URL value="@Theme.css" />
+          </stylesheets>
+        </ToggleButton>
       </children>
       <stylesheets>
         <URL value="@Theme.css" />
       </stylesheets>
     </HBox>
-    <TextField layoutX="130.0" layoutY="257.0" prefWidth="160.0">
+    <TextField fx:id="real1Input" layoutX="130.0" layoutY="257.0" prefWidth="160.0">
       <stylesheets>
         <URL value="@Theme.css" />
       </stylesheets>
     </TextField>
-    <TextField layoutX="310.0" layoutY="257.0" prefWidth="160.0">
+    <TextField fx:id="real2Input" layoutX="310.0" layoutY="257.0" prefWidth="160.0">
       <stylesheets>
         <URL value="@Theme.css" />
       </stylesheets>
     </TextField>
-    <TextField layoutX="130.0" layoutY="314.0" prefWidth="160.0">
+    <TextField fx:id="imag1Input" layoutX="130.0" layoutY="314.0" prefWidth="160.0">
       <stylesheets>
         <URL value="@Theme.css" />
       </stylesheets>
     </TextField>
-    <TextField layoutX="310.0" layoutY="314.0" prefWidth="160.0">
+    <TextField fx:id="imag2Input" layoutX="310.0" layoutY="314.0" prefWidth="160.0">
       <stylesheets>
         <URL value="@Theme.css" />
       </stylesheets>
@@ -46,21 +65,53 @@
     <Label layoutX="368.0" layoutY="231.0" text="Real 2" />
     <Label layoutX="174.0" layoutY="289.0" text="Imaginär 1" />
     <Label layoutX="353.0" layoutY="289.0" text="Imaginär 2" />
-    <HBox alignment="BASELINE_CENTER" layoutX="130.0" layoutY="35.0" padding="$x1" prefHeight="117.0" prefWidth="340.0" spacing="30.0" styleClass="h-box">
-      <children>
-        <Text id="" fill="WHITE" scaleX="2.0328215987294866" scaleY="1.3783651492902593" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Real1">
-          <HBox.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" fx:id="x1" />
-          </HBox.margin>
-        </Text>
-        <Text id="" fill="WHITE" scaleX="2.0328215987294866" scaleY="1.3783651492902593" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Imag1" x="100.0" HBox.margin="$x1" />
-        <Text id="" fill="WHITE" scaleX="2.0328215987294866" scaleY="1.3783651492902593" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Real2" HBox.margin="$x1" />
-        <Text id="" fill="WHITE" scaleX="2.0328215987294866" scaleY="1.3783651492902593" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Imag2" HBox.margin="$x1" />
-      </children>
+    <SplitPane dividerPositions="0.3416666666666667" focusTraversable="true" layoutX="130.0" layoutY="33.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="340.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <HBox id="HBox" alignment="CENTER" layoutX="1.0" layoutY="4.0" prefWidth="333.9998779296875" spacing="3.0">
+              <children>
+                <TextField fx:id="real1Output" editable="false" prefWidth="72.0" HBox.hgrow="ALWAYS">
+                  <stylesheets>
+                    <URL value="@Theme.css" />
+                  </stylesheets>
+                </TextField>
+                <TextField fx:id="imag1Output" editable="false" prefWidth="72.0" HBox.hgrow="ALWAYS">
+                  <stylesheets>
+                    <URL value="@Theme.css" />
+                  </stylesheets>
+                </TextField>
+                <TextField fx:id="real2Output" editable="false" prefWidth="72.0" HBox.hgrow="ALWAYS">
+                  <stylesheets>
+                    <URL value="@Theme.css" />
+                  </stylesheets>
+                </TextField>
+                <TextField fx:id="imag2Output" editable="false" prefWidth="72.0" HBox.hgrow="ALWAYS">
+                  <stylesheets>
+                    <URL value="@Theme.css" />
+                  </stylesheets>
+                </TextField>
+              </children>
+              <padding>
+                <Insets left="2.0" right="5.0" />
+              </padding>
+            </HBox>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <TextField fx:id="resultOutput" editable="false" layoutX="69.0" layoutY="25.0" prefWidth="200.0">
+              <stylesheets>
+                <URL value="@Theme.css" />
+              </stylesheets>
+            </TextField>
+          </children>
+        </AnchorPane>
+      </items>
       <stylesheets>
         <URL value="@Theme.css" />
       </stylesheets>
-    </HBox>
+    </SplitPane>
   </children>
   <stylesheets>
     <URL value="@Theme.css" />
