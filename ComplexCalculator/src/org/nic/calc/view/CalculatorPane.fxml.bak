@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="org.nic.calc.controller.CalculatorController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <HBox id="HBox" alignment="CENTER" layoutX="130.0" layoutY="186.0" spacing="20.0">
+      <children>
+        <Button mnemonicParsing="false" prefWidth="70.0" text="+" />
+        <Button mnemonicParsing="false" prefWidth="70.0" text="-" />
+        <Button mnemonicParsing="false" prefWidth="70.0" text="*" />
+        <Button mnemonicParsing="false" prefWidth="70.0" text="/" />
+      </children>
+      <stylesheets>
+        <URL value="@Theme.css" />
+      </stylesheets>
+    </HBox>
+    <TextField layoutX="130.0" layoutY="257.0" prefWidth="160.0">
+      <stylesheets>
+        <URL value="@Theme.css" />
+      </stylesheets>
+    </TextField>
+    <TextField layoutX="310.0" layoutY="257.0" prefWidth="160.0">
+      <stylesheets>
+        <URL value="@Theme.css" />
+      </stylesheets>
+    </TextField>
+    <TextField layoutX="130.0" layoutY="314.0" prefWidth="160.0">
+      <stylesheets>
+        <URL value="@Theme.css" />
+      </stylesheets>
+    </TextField>
+    <TextField layoutX="310.0" layoutY="314.0" prefWidth="160.0">
+      <stylesheets>
+        <URL value="@Theme.css" />
+      </stylesheets>
+    </TextField>
+    <Label layoutX="188.0" layoutY="231.0" text="Real 1" />
+    <Label layoutX="368.0" layoutY="231.0" text="Real 2" />
+    <Label layoutX="171.0" layoutY="289.0" text="Imaginär 1" />
+    <Label layoutX="352.0" layoutY="289.0" text="Imaginär 2" />
+    <HBox layoutX="130.0" layoutY="35.0" prefHeight="117.0" prefWidth="340.0" styleClass="h-box">
+      <children>
+        <Text scaleX="2.0328215987294866" scaleY="1.3783651492902593" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Text" />
+      </children>
+      <stylesheets>
+        <URL value="@Theme.css" />
+      </stylesheets>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@Theme.css" />
+  </stylesheets>
+</AnchorPane>
