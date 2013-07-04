@@ -150,7 +150,7 @@
 }
 
 .text-field {
-	-fx-border-color: white, white;
+	-fx-border-color: transparent, transparent;
 	-fx-background-color:transparent;
 	-fx-border-width: 2;
 	-fx-highlight-text-fill: rgb(147,149,148);
@@ -160,7 +160,7 @@
 }
 
 .h-box {
-	-fx-border-color: white, white;
+	-fx-border-color: transparent, transparent;
 	-fx-background-color:transparent;
 	-fx-border-width: 2;
 }
@@ -236,10 +236,6 @@
 	-fx-text-fill:white;
 	/*-fx-ellipsis-string: ;*/
 	-fx-effect:innershadow( three-pass-box, #ffb800, 20, 0, 0, 0 ) ;
-}
-
-.toggle-button:disabled {
-	 -fx-opacity: 0.8;
 }
 
 .toggle-button:hover {

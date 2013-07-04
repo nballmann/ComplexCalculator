@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="org.nic.calc.controller.RootPaneController">
+<BorderPane prefHeight="400.0" prefWidth="400.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="org.nic.calc.controller.RootPaneController">
   <!-- TODO Add Nodes -->
   <stylesheets>
     <URL value="@Theme.css" />
@@ -19,12 +19,7 @@
             <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Delete" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Help">
+        <Menu mnemonicParsing="false" onAction="#handleAbout" text="About" fx:id="menuAbout">
           <items>
             <MenuItem mnemonicParsing="false" text="About" />
           </items>

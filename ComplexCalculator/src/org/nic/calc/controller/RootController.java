@@ -15,16 +15,22 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class RootController extends StackPane
 {
 	private HashMap<String, Node> screens = new HashMap<>();
 	
-	public RootController()
+	private Stage stage;	
+	
+	public RootController(Stage primaryStage)
 	{
 		super();
+		stage = primaryStage;
 	}
+	
+	public Stage getStage()	{ return stage; }
 	
 	public void addScreen(String name, Node screen)
 	{
